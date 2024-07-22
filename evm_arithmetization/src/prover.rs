@@ -315,7 +315,7 @@ where
 /// - the initial state of the challenger,
 /// - all the requires Merkle caps,
 /// - all the required polynomial and FRI argument openings.
-pub(crate) fn prove_single_table<F, C, S, const D: usize>(
+pub fn prove_single_table<F, C, S, const D: usize>(
     stark: &S,
     config: &StarkConfig,
     trace_poly_values: &[PolynomialValues<F>],
