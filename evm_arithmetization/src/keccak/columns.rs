@@ -28,7 +28,7 @@ pub(crate) fn reg_input_limb<F: Field>(i: usize) -> Column<F> {
 /// Registers to hold permutation outputs.
 /// `reg_output_limb(2*i) -> output[i] as u32`
 /// `reg_output_limb(2*i+1) -> output[i] >> 32`
-pub(crate) const fn reg_output_limb(i: usize) -> usize {
+pub const fn reg_output_limb(i: usize) -> usize {
     debug_assert!(i < 2 * NUM_INPUTS);
     let i_u64 = i / 2; // The index of the 64-bit chunk.
 
